@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora</title>
+
+    <style>
+        body{
+                background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p2/1893870-valentine-s-day-red-hearts-background-gr%C3%A1tis-vetor.png);
+        }
+        .painel{
+            margin:auto;
+            background-color: white;
+            width: 500px;
+            height:500px;
+            border-radius: 70px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #sim{
+            height: 50px;
+            width: 90px;
+            background-color: rgb(255, 0, 0);
+            border-radius: 20px;
+            margin-left: -120px;
+            margin-top: 100px;
+
+
+        }
+
+        #nao{
+            position: absolute;
+            height: 50px;
+            width: 90px;
+            background-color: red;
+            border-radius: 20px;
+            margin-left: 70px;
+            margin-left: 40px;
+            margin-top: 100px;
+
+        }
+
+        .imagem{
+            width: 400px;
+            margin-top: 60px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="painel">
+            <h1>Vem dormir cmg hoje?</h1>
+            
+            <img class="imagem" src="https://th.bing.com/th/id/R.a8da9d28df8a014aa2b09dbadaacf174?rik=J9zhzyu5su0bsw&riu=http%3a%2f%2fih0.redbubble.net%2fimage.218240641.2451%2fflat%2c800x800%2c075%2cf.u5.jpg&ehk=4QL45h3TJuaAqyrCjpyBRyyT0VlGb3XL604s%2bWO0TSY%3d&risl=&pid=ImgRaw&r=0">
+           <br>
+            <a href="https://www.youtube.com/watch?v=4N9JJ_-ud8A&ab_channel=oMiRaNhA"><button id="sim"> sim </button></a>
+            <button onmouseover="fuja()" id="nao"> não </button>
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+</body>
+</html>
